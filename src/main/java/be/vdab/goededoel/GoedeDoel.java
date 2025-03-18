@@ -17,4 +17,17 @@ public class GoedeDoel {
 	public BigDecimal getOpbrengst() {
 		return opbrengst;
 	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof GoedeDoel goedeDoel)) return false;
+		return naam.equals(goedeDoel.naam);
+	}
+
+	@Override
+	public int hashCode() {
+		return naam.hashCode();
+	}
+
 }
